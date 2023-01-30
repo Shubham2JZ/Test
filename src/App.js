@@ -20,8 +20,9 @@ function App() {
     arr.push(inputRef.current.value);
     setList(arr);
   };
-  const handleDelete = (e) => {
-    console.log(e);
+  const handleDelete = (i) => {
+    let arr = [...list];
+    setList(arr.filter((n) => n !== list[i]));
   };
 
   useEffect(() => {
